@@ -66,7 +66,7 @@ class LogFormatter implements LogFormatterInterface
     {
         return sprintf(
             '[%s] %s %s',
-            date('Y-m-d H:i:s', $log->timestamp),
+            date('Y-m-d H:i:s P', $log->timestamp),
             strtoupper($log->name),
             self::interpolate($log->message, $log->context)
         );
